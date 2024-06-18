@@ -19,8 +19,8 @@ jobs:
             tar -xf D:/cache.tar.xz -C $(Resolve-Path msys64/home/CCOM-9020M$/.ccache)
           }
 
-      - name: Get ini file
-        run: Invoke-WebRequest https://pastebin.com/raw/07hLkLza -OutFile build/media-autobuild_suite.ini
+      # - name: Get ini file
+      #   run: Invoke-WebRequest https://pastebin.com/raw/07hLkLza -OutFile build/media-autobuild_suite.ini
 
       - name: Replace do_prompt
         run: sed -i 's/do_prompt /echo /g' build/media-suite_helper.sh build/media-suite_compile.sh
